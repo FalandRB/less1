@@ -31,3 +31,5 @@ while text.count('нд') <= text.count('о'):
     text = '. '.join(lst)
 else:
     print('Вот теперь "нд" больше "о": \n', text)
+#123123123123123123
+#1231231231231231
