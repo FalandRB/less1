@@ -1,7 +1,7 @@
 # ввод данных
 height = float(input('Ваш рост в сантиметрах: ')) / 100
 weight = float(input('Ваш вес в килограммах: '))
-if weight == 0:
+if weight <= 0 and height <= 0:
    exit('Введены неверные значения, попробуйте еще раз')
 # расчет
 bmi = weight / height**2
