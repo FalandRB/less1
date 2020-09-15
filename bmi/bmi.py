@@ -25,9 +25,17 @@ first = round(bmi)
 second = 100 - first
 scale = '0' + '=' * (first - 1) + str(first) + '=' * (second - 1) + '100'
 # Тут красивее именно так '=' * (first - 1) и '=' * (second - 1)
-print('График: \n', scale)
+print('График (0 - 100): \n', scale)
 """
 В целом можно предусмотреть вывод относительной шкалы,
 но нужно предусмотреть крайние точки и шаг.
 Лучшее враг хорошего ;)
 """
+print('Построим шаговую шкалу')
+step_beg = int(input('Начало шкалы: '))
+step_end = int(input('Конец шкалы: '))
+step = int(input('Шаг шкалы: '))
+first = round(bmi) - step_beg
+second = step_end - round(bmi)
+scale = str(step_beg) + '=' * (round(first / step) - 1) + str(round(bmi)) + '=' * round((second / step) - 1) + str(step_end)
+print('График: \n', scale)
