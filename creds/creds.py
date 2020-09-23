@@ -12,6 +12,6 @@ def auth_required(some_func):
 
 @auth_required
 def some_func(a, b):
-    print(f'Hello {a}')
+    print(f'Hello {a} your pass is {b}')
 
 some_func(input('Login: '), input('Password: '))
