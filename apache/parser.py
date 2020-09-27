@@ -22,4 +22,4 @@ def reader(filename):
     return True
 
 #Запуск функции
-reader('123.log')
+reader(input('Имя файла: '))
