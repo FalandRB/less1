@@ -16,7 +16,7 @@ def reader(filename):
         count_br = Counter(browsers)
         print('Всего обращений:', len(ips))
         print('Уникальных IP:', len(count_ip))
-        print('Все UserAgents:', browsers)
+        print('Все UserAgents:', count_br)
         print('От каждого UA:', len(count_br))
     #Вернем что надо, если надо
     return True
