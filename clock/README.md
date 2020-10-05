@@ -1,3 +1,3 @@
 # Simple console clock
 
-## Just run and keep on look on it!
+## Just run and keep looking at it!
