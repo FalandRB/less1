@@ -14,6 +14,8 @@ def reader(filename):
         browsers = re.findall(br_exp, log)
         count_ip = Counter(ips)
         count_br = Counter(browsers)
+        for i in range (len(ips)):
+            print(ips[i], '\n')
         print('Всего обращений:', len(ips))
         print('Уникальных IP:', len(count_ip))
         print('Все UserAgents:', count_br)
@@ -22,4 +24,5 @@ def reader(filename):
     return True
 
 #Запуск функции
-reader(input('Имя файла: '))
+reader('d:/prog/less1/apache/error.log')
+
