@@ -36,6 +36,16 @@ class User(Base):
         session.commit()
         return True
 
+# Update by name
+    @classmethod
+    def update(cls, name, new_name): 
+        user = session.query(cls).filter_by(name=name).one()
+        user.name = new_name
+        session.add(user)
+        session.commit()
+        return True
+
+
     @classmethod
     def all(cls): 
         return session.query(cls).all()

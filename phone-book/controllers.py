@@ -21,12 +21,20 @@ def all_users_controller(data=None, cls=True):
     input("Продолжить?")
     return 'main', None # (next state, data)
 
-# Delit user
+# Delete user
 def delete_user_controller(data=None, cls=True):
     render_template(context={}, template="del_user.jinja2", cls=cls)
     userToDelete = input()
     user = User.delete(userToDelete)
     return 'main', user # (next state, data)
+
+# Update by user
+def update_user_controller(data=None, cls=True):
+    render_template(context={}, template="upd_user.jinja2", cls=cls)
+    userToUpdate = input()
+    user = User.update(userToUpdate)
+    new_name = input('Новое имя:')
+    return 'main', user, new_name # (next state, data, data)
 
 
 def add_user_controller(data=None, cls=True):
@@ -58,6 +66,7 @@ controllers_dict = { # use dict type instead of if else chain
     '0': exit_controller,
     '1': all_users_controller,
     '2': add_user_controller,
+    '3': update_user_controller,
     '4': delete_user_controller,
     21: add_phone_controller, # user can't enter 21 of int type
     212: add_more_controller
